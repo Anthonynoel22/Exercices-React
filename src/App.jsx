@@ -1,5 +1,5 @@
-import Compteur from "./composants/Compteur.jsx";
-import TexteLive from "./composants/TexteLive.jsx";
+import Compteur from "./components/Compteur.jsx";
+import TexteLive from "./components/TexteLive.jsx";
 
 function App() {
   return (
