@@ -1,18 +1,18 @@
 import { useState } from "react";
 
 function TodoList() {
-    const [tasks, setTaches] = useState([]);
-    const [newTask, setNouvelleTache] = useState("");
+    const [tasks, setTask] = useState([]);
+    const [newTask, setNewTask] = useState("");
 
     const addTask = () => {
         if (newTask.trim()) {
-            setTaches([...tasks, newTask]);
-            setNouvelleTache("");
+            setTask([...tasks, newTask]);
+            setNewTask("");
         }
     };
 
     const deleteTask = (index) => {
-        setTaches(tasks.filter((_, i) => i !== index));
+        setTask(tasks.filter((_, i) => i !== index));
     };
 
     return (
@@ -20,7 +20,7 @@ function TodoList() {
             <h2>My Todo List</h2>
             <input
                 value={newTask}
-                onChange={(e) => setNouvelleTache(e.target.value)}
+                onChange={(e) => setNewTask(e.target.value)}
                 placeholder="Nouvelle tâche..."
             />
             <button onClick={addTask}>Ajouter</button>
