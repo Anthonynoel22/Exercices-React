@@ -4,6 +4,7 @@ import TexteLive from "./components/TexteLive.jsx";
 import TodoList from "./components/TodoList.jsx";
 import LikesToggle from "./components/LikesToggle.jsx";
 import MouseTracker from "./components/MouseTraker.jsx";
+import ToggleBlackWhite from "./components/ToggleBlackWhite.jsx";
 
 function App() {
   const [exo, setExo] = useState("compteur");
@@ -18,6 +19,7 @@ function App() {
         <button onClick={() => setExo("todo")}>Todo List</button>
         <button onClick={() => setExo("like")}>LikesToggle</button>
         <button onClick={() => setExo("mouse")}>MouseTracker</button>
+        <button onClick={() => setExo("toggle")}>ToggleBlackWhite</button>
       </div>
 
       {exo === "compteur" && <Compteur />}
@@ -25,6 +27,7 @@ function App() {
       {exo === "todo" && <TodoList />}
       {exo === "like" && <LikesToggle />}
       {exo === "mouse" && <MouseTracker />}
+      {exo === "toggle" && <ToggleBlackWhite />}
     </div>
   );
 }
