@@ -12,7 +12,7 @@ function TexteLive () {
             <input 
             type="text"
             value={text}
-            onChange={(e) => setText(e.target.value)}
+            onChange={ e => setText(e.target.value)}
             placeholder='write something...'
             />
             <p>you writed <strong>{text}</strong></p>
