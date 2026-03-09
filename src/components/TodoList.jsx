@@ -4,6 +4,7 @@ function TodoList() {
     const [tasks, setTask] = useState([]);
     const [newTask, setNewTask] = useState("");
 
+    //.trim pour éviter les espacement et chaines vides 
     const addTask = () => {
         if (newTask.trim()) {
             setTask([...tasks, newTask]);
@@ -24,9 +25,9 @@ function TodoList() {
             <input
                 value={newTask}
                 onChange={ e => setNewTask(e.target.value)}
-                placeholder="Nouvelle tâche..."
+                placeholder="NewTask..."
             />
-            <button onClick={addTask}>Ajouter</button>
+            <button onClick={addTask}>Add</button>
 
             <ul>
                 {tasks.map((task, index) => (
