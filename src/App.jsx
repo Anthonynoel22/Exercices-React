@@ -5,6 +5,7 @@ import TodoList from "./components/TodoList.jsx";
 import LikesToggle from "./components/LikesToggle.jsx";
 import MouseTracker from "./components/MouseTraker.jsx";
 import ToggleBlackWhite from "./components/ToggleBlackWhite.jsx";
+import MessageCard from "./components/MessageCard.jsx";
 
 function App() {
   const [exo, setExo] = useState("compteur");
@@ -20,6 +21,7 @@ function App() {
         <button onClick={() => setExo("like")}>LikesToggle</button>
         <button onClick={() => setExo("mouse")}>MouseTracker</button>
         <button onClick={() => setExo("toggle")}>ToggleBlackWhite</button>
+        <button onClick={() => setExo("message")}>MessageCard</button>
       </div>
 
       {exo === "compteur" && <Compteur />}
@@ -28,6 +30,20 @@ function App() {
       {exo === "like" && <LikesToggle />}
       {exo === "mouse" && <MouseTracker />}
       {exo === "toggle" && <ToggleBlackWhite />}
+      {exo === "message" && 
+      <>
+      <MessageCard 
+      author= "Alice" 
+      content="N'oublie pas le rdv du dentiste" 
+      isImportant={true}
+      /> 
+      <MessageCard 
+      author= "Bob" 
+      content="Bon voyage" 
+      isImportant={false}
+      />
+      </>
+      }
     </div>
   );
 }
