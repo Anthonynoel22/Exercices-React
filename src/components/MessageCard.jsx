@@ -6,6 +6,7 @@ function MessageCard({author, content, isImportant}) {
         border: "1px solid #cccccc", // Bordure grise
         borderRadius: "8px", // Coins arrondis
         padding: "12px", // Espace interne
+        marginTop: "8px",
         marginBottom: "8px", // Espace entre les cartes 
     };
 

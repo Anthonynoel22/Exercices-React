@@ -35,7 +35,8 @@ function MouseTracker () {
                 height: 200, // Hauteur de la zone
                 backgroundColor: isHover ? "lightgray" : "lightgreen", // Change la couleur selon hover 
                 border: "1px solid #333", // Bordure
-                marginBottom: 16 // Espace en dessous
+                marginTop: 16,
+                marginBottom: 16, // Espace en dessous
                 }}
                 onMouseEnter={handleOnMouseEnter} // Quand la souris entre
                 onMouseLeave={handleOnMouseLeave} // Quand la souris sort
