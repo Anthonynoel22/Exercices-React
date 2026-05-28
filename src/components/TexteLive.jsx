@@ -15,7 +15,7 @@ function TexteLive () {
             <div style={{marginTop: 16,}}>
                 <input 
                 type="text" // Champ de saisie texte
-                value={text} // Valeur contrôlée pae le state
+                value={text} // Valeur contrôlée par le state
                 onChange={ e => setText(e.target.value)} // Met à jour le state à chaque frappe
                 placeholder='write something...' // Texte indicatif dans l'input 
                 />
